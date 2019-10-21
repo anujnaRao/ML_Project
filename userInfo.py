@@ -1,14 +1,25 @@
-class userInfo:
-    def getInfo(self):
-        self.usn=int(input("Enter your usn: "))
-        self.name=input("Enter your name:  ")
-        self.age=int(input("Enter the age: "))
+import csv
+import xlwt 
+from xlwt import Workbook 
 
-    def printInfo(self):
-        print("USN: ",self.usn)
-        print("Name: ",self.name)
-        print("Age: ",self.age)
 
-u=userInfo()
-u.getInfo()
-u.printInfo()
+usn=int(input("Enter your usn: "))
+name=input("Enter your name:  ")
+age=int(input("Enter the age: "))
+
+       
+  
+# Workbook is created 
+wb = Workbook() 
+  
+# add_sheet is used to create sheet. 
+sheet1 = wb.add_sheet('Sheet 1') 
+
+sheet1.write(1,0,'USN')
+sheet1.write(2,0,'Name')
+sheet1.write(3,0,'Age')
+sheet1.write(0,1,usn)
+sheet1.write(0,2,name)
+sheet1.write(0,3,age)
+
+wb.save('xlwt userInfo.xls')
