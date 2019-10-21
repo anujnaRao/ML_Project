@@ -7,8 +7,8 @@ usn=int(input("Enter your usn: "))
 name=input("Enter your name:  ")
 age=int(input("Enter the age: "))
 
-       
-  
+
+
 # Workbook is created 
 wb = Workbook() 
   
